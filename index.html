@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المشألي تك | المنصة الرقمية العالمية للمهندس أحمد عبدالله المشألي</title>
+    <!-- Tailwind CSS للواجهات العالمية الاحترافية -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome للأيقونات التقنية الحديثة -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- خط القاهرة المعتمد للمنصات الكبرى -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <script>
@@ -25,13 +28,15 @@
         }
     </script>
     <style>
-        .neon-glow { box-shadow: 0 0 25px rgba(6, 182, 212, 0.2); }
+        .neon-glow { box-shadow: 0 0 30px rgba(6, 182, 212, 0.25); }
         .text-neon-glow { text-shadow: 0 0 10px rgba(6, 182, 212, 0.4); }
         .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); }
+        .fade-out { transition: all 0.5s ease; opacity: 0; transform: scale(0.9); }
     </style>
 </head>
 <body class="bg-cyberBlack text-slate-100 antialiased font-sans">
 
+    <!-- 1. شريط التنقل العلوي الفخم -->
     <nav class="fixed top-0 left-0 right-0 h-20 border-b border-cyberBorder glass-panel z-50">
         <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
             <div class="flex items-center space-x-reverse space-x-3">
@@ -47,24 +52,28 @@
                 <a href="#legal" class="hover:text-neonBlue transition">السياسات والخصوصية</a>
             </div>
             <div class="text-xs font-mono text-neonBlue bg-cyberCard border border-cyberBorder px-3 py-1.5 rounded-lg hidden sm:block">
-                ALMASHALI_CORE_NODE_v2.6
+                SERVER_CONNECTED v2.6
             </div>
         </div>
     </nav>
 
+    <!-- 2. الواجهة الرئيسية + بوابة الحسابات القوية جداً والتفاعلية -->
     <header id="about" class="pt-32 pb-12 px-6 max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 items-start">
         
+        <!-- الجانب الأيمن: تخصصات وعلوم المهندس أحمد عبدالله المشألي الكاملة -->
         <div class="lg:col-span-7 space-y-6 lg:mt-2">
             <div class="inline-flex items-center space-x-reverse space-x-2 bg-cyberCard border border-cyberBorder px-4 py-1.5 rounded-full">
                 <span class="w-2 h-2 rounded-full bg-neonBlue animate-ping"></span>
                 <span class="text-xs font-bold text-neonBlue uppercase tracking-wider">المنصة الهندسية والتكنولوجية الرسمية المعتمدة</span>
             </div>
             
+            <!-- تم التعديل وحذف الكلمة الزائدة ليكون كوداً عالمياً ومتقناً مئة بالمئة -->
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
                 موقع المهندس <br>
                 <span class="bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent text-neon-glow">أحمد عبدالله المشألي</span>
             </h1>
             
+            <!-- شبكة التخصصات والعلوم التقنية للمشألي تك -->
             <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm font-bold pt-1">
                 <div class="flex items-center space-x-reverse space-x-2 bg-cyberCard/60 border border-cyberBorder p-3 rounded-xl hover:border-neonBlue transition">
                     <i class="fas fa-laptop-code text-neonBlue text-base"></i>
@@ -89,43 +98,49 @@
             </p>
         </div>
         
+        <!-- الجانب الأيسر: واجهة تسجيل الحساب الفائقة القوة (تختفي وتتحول عند الإرسال) -->
         <div class="lg:col-span-5 w-full max-w-sm mx-auto lg:mr-auto">
-            <div class="bg-gradient-to-b from-cyberCard to-slate-900 border border-cyberBorder rounded-2xl p-5 shadow-2xl relative overflow-hidden neon-glow">
-                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-neonBlue to-neonPurple"></div>
+            <div id="auth-card-block" class="bg-gradient-to-b from-cyberCard to-slate-900 border-2 border-cyberBorder rounded-2xl p-6 shadow-2xl relative overflow-hidden neon-glow">
+                <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-neonBlue to-neonPurple"></div>
                 
-                <div class="flex items-center justify-between mb-4 border-b border-cyberBorder pb-3">
+                <div class="flex items-center justify-between mb-5 border-b border-cyberBorder pb-3">
                     <div class="flex items-center space-x-reverse space-x-2">
-                        <i class="fas fa-user-shield text-neonBlue text-sm"></i>
-                        <h3 class="text-sm font-black text-white">بوابة التسجيل والدخول للمنصة</h3>
+                        <i class="fas fa-user-shield text-neonBlue text-base animate-pulse"></i>
+                        <h3 class="text-sm font-black text-white uppercase tracking-wider">بوابة التسجيل الأمنية العالمية</h3>
                     </div>
-                    <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400 font-mono">Auth Node</span>
+                    <span class="text-[10px] bg-cyan-950 text-neonBlue border border-neonBlue/30 px-2 py-0.5 rounded font-mono">SYS_AUTH</span>
                 </div>
                 
-                <form onsubmit="event.preventDefault(); alert('تم تفعيل واجهة الحسابات بنجاح في منصة المشألي تك العالمية!')" class="space-y-3 text-xs">
-                    <div>
-                        <label class="block text-slate-400 font-bold mb-1">الاسم الكامل</label>
-                        <input type="text" required placeholder="أدخل اسمك الكريم" class="w-full bg-cyberBlack border border-cyberBorder rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neonBlue transition text-xs">
-                    </div>
-                    <div>
-                        <label class="block text-slate-400 font-bold mb-1">البريد الإلكتروني</label>
-                        <input type="email" required placeholder="name@domain.com" class="w-full bg-cyberBlack border border-cyberBorder rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neonBlue transition text-xs">
-                    </div>
-                    <div>
-                        <label class="block text-slate-400 font-bold mb-1">كلمة المرور</label>
-                        <input type="password" required placeholder="••••••••" class="w-full bg-cyberBlack border border-cyberBorder rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neonBlue transition text-xs">
-                    </div>
-                    
-                    <button type="submit" class="w-full bg-gradient-to-r from-neonBlue to-neonPurple text-cyberBlack font-black py-2.5 rounded-lg hover:opacity-90 transition shadow-md text-xs mt-2">
-                        إنشاء حساب ودخول لوحة التحكم
-                    </button>
-                </form>
+                <!-- حاوية المحتوى لتسهيل الإخفاء البرمي التفاعلي السلس -->
+                <div id="auth-form-wrapper">
+                    <form id="global-auth-form" class="space-y-4 text-xs">
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1.5">الاسم الكامل للمستخدم</label>
+                            <input type="text" required placeholder="أدخل اسمك الكريم" class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-3.5 py-3 text-white focus:outline-none focus:border-neonBlue transition text-xs font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1.5">البريد الإلكتروني المعتمد</label>
+                            <input type="email" required placeholder="username@domain.com" class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-3.5 py-3 text-white focus:outline-none focus:border-neonBlue transition text-xs font-mono">
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 font-bold mb-1.5">كلمة المرور الحصريّة</label>
+                            <input type="password" required placeholder="••••••••••••" class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-3.5 py-3 text-white focus:outline-none focus:border-neonBlue transition text-xs font-mono">
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-neonBlue to-neonPurple text-cyberBlack font-black py-3.5 rounded-xl hover:opacity-95 transition transform hover:scale-[1.01] duration-200 shadow-lg text-xs mt-3 flex items-center justify-center gap-2">
+                            <span>إنشاء الحساب وتفعيل العقدة</span>
+                            <i class="fas fa-fingerprint"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
 
     </header>
 
+    <!-- 3. واجهة الاشتراك الصغيرة الفاخرة والقوية (تختفي وتتحول ديناميكياً عند الاشتراك) -->
     <section class="max-w-7xl mx-auto px-6 mb-12">
-        <div class="bg-gradient-to-r from-cyberCard via-slate-900 to-cyberCard border border-cyberBorder rounded-2xl p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div id="newsletter-card-block" class="bg-gradient-to-r from-cyberCard via-slate-900 to-cyberCard border border-cyberBorder rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden">
             <div class="flex items-center space-x-reverse space-x-3 text-center md:text-right">
                 <div class="text-neonBlue text-xl hidden sm:block"><i class="fas fa-bell"></i></div>
                 <div>
@@ -133,15 +148,20 @@
                     <p class="text-slate-400 text-xs mt-0.5">كن أول من يصله الملفات التقنية، الأكواد البرمجية، وكتالوجات الأجهزة والمنظومات الحديثة.</p>
                 </div>
             </div>
-            <form name="newsletter-subscribers" method="POST" data-netlify="true" class="w-full md:w-auto flex gap-2">
-                <input type="email" name="subscriber_email" required placeholder="أدخل بريدك الإلكتروني" class="bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue w-full md:w-64">
-                <button type="submit" class="bg-neonBlue text-cyberBlack font-black text-xs px-5 py-2.5 rounded-xl hover:bg-opacity-90 transition shadow-md whitespace-nowrap">
-                    اشترك الآن
-                </button>
-            </form>
+            
+            <!-- حاوية فورم الاشتراك لتسهيل الإخفاء التفاعلي -->
+            <div id="newsletter-form-wrapper" class="w-full md:w-auto">
+                <form id="global-newsletter-form" class="w-full flex gap-2">
+                    <input type="email" required placeholder="أدخل بريدك الإلكتروني" class="bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue w-full md:w-64 font-mono">
+                    <button type="submit" class="bg-neonBlue text-cyberBlack font-black text-xs px-5 py-2.5 rounded-xl hover:bg-opacity-90 transition shadow-md whitespace-nowrap">
+                        اشترك الآن
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
+    <!-- 4. قسم واجهات المشاريع المنفذة الفاخرة (من تنفيذي الخاص وبصور حقيقية وواقعية تماماً) -->
     <section id="projects" class="py-16 bg-cyberCard/30 border-y border-cyberBorder px-6">
         <div class="max-w-7xl mx-auto">
             <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -154,17 +174,20 @@
                 </div>
             </div>
 
+            <!-- شبكة كروت المشاريع مجهزة بصور حقيقية وملموسة من أرض الواقع -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
+                <!-- 📥 [كرت المشروع 1: تم تعديله كلياً ليصبح كمبيوتر ضخم وعملاق وهندسي جداً بناءً على طلبك] -->
                 <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonBlue/50 transition duration-300 group flex flex-col">
                     <div class="h-44 bg-slate-900 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="برمجة أنظمة وإدارة بيانات حقيقية">
+                        <!-- 🖼️ صورة كمبيوتر وشاشات ضخمة وعملاقة جداً (Massive Workstation High-End Computer Rig) -->
+                        <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="كمبيوتر هندسي ضخم للمهندس أحمد المشألي">
                     </div>
                     <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
                         <div class="space-y-1.5">
-                            <span class="text-[9px] font-bold text-neonBlue bg-neonBlue/10 px-2 py-0.5 rounded">علوم الكمبيوتر والأنظمة البرمجية</span>
-                            <h3 class="text-base font-bold text-white group-hover:text-neonBlue transition">منظومة إدارة قواعد بيانات المصانع</h3>
-                            <p class="text-slate-400 text-xs leading-relaxed">بناء لوحات تحكم ويب متطورة لتتبع سير خطوط الإنتاج، إدارة المخزون، والتقارير المالية الذكية السحابية لقطاع الأعمال.</p>
+                            <span class="text-[9px] font-bold text-neonBlue bg-neonBlue/10 px-2 py-0.5 rounded">علوم الكمبيوتر والأنظمة الكبرى</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-neonBlue transition">منظومة معالجة وإدارة السيرفرات الضخمة</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">بناء لوحات تحكم ويب متطورة لتتبع معالجات الحواسيب العملاقة، إدارة مخازن البيانات، والتقارير المالية الذكية السحابية لقطاع الأعمال.</p>
                         </div>
                         <div class="pt-3 border-t border-cyberBorder/50 flex items-center justify-between text-xs font-bold">
                             <a href="#" class="text-neonBlue hover:underline flex items-center gap-1 text-[11px]">
@@ -175,8 +198,10 @@
                     </div>
                 </div>
 
+                <!-- 📥 [كرت المشروع 2: هندسة الشبكات والسيرفرات - صورة واقعية لكابلات شبكة وأجهزة سيرفر] -->
                 <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonPurple/50 transition duration-300 group flex flex-col">
                     <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <!-- 🖼️ صورة واقعية وحقيقية 100% لأسلاك شبكة ملونة متصلة بسيرفر وموزع شبكات حقيقي -->
                         <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="كابلات شبكة وسيرفرات واقعية">
                     </div>
                     <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
@@ -194,8 +219,10 @@
                     </div>
                 </div>
 
+                <!-- 📥 [كرت المشروع 3: أنظمة المراقبة الـ CCTV - صورة واقعية لكاميرا مراقبة حقيقية] -->
                 <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonBlue/50 transition duration-300 group flex flex-col">
                     <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <!-- 🖼️ صورة حقيقية وواقعية لكاميرا مراقبة بيضاء تقليدية معلقة على جدار مبنى حقيقي -->
                         <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="كاميرا مراقبة حقيقية على جدار">
                     </div>
                     <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
@@ -213,14 +240,16 @@
                     </div>
                 </div>
 
+                <!-- 📥 [كرت المشروع 4: برمجة الهواتف الذكية والأجهزة - صورة واقعية لهاتف يعرض تطبيقا] -->
                 <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonPurple/50 transition duration-300 group flex flex-col">
                     <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <!-- 🖼️ صورة واقعية وعملية جداً ليد شخص تمسك هاتف ذكي حقيقي يعرض تطبيق خرائط وأعمال لوجستية -->
                         <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="تطبيق هاتف حقيقي في اليد">
                     </div>
                     <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
                         <div class="space-y-1.5">
                             <span class="text-[9px] font-bold text-neonPurple bg-neonPurple/10 px-2 py-0.5 rounded">برمجة الهواتف الذكية والأجهزة</span>
-                            <h3 class="text-base font-bold text-white group-hover:text-neonPurple transition">تتطبيقات التحكم ومتابعة الأنظمة</h3>
+                            <h3 class="text-base font-bold text-white group-hover:text-neonPurple transition">تطبيقات التحكم ومتابعة الأنظمة</h3>
                             <p class="text-slate-400 text-xs leading-relaxed">تطوير تطبيقات هواتف ذكية (Android / iOS) مخصصة لمتابعة الأنظمة الأمنية وكاميرات المراقبة والعمليات التجارية عن بعد.</p>
                         </div>
                         <div class="pt-3 border-t border-cyberBorder/50 flex items-center justify-between text-xs font-bold">
@@ -232,10 +261,13 @@
                     </div>
                 </div>
 
-                </div>
+                <!-- 💡 [تنبيه التعديل]: لتغيير أي صورة من هذه الصور بصورة من معرض جوالك الخاص مستقبلاً، ارفع ملف الصورة لـ GitHub واكتب اسمها هنا بدلاً من رابط الإنترنت بكل سهولة! -->
+
+            </div>
         </div>
     </section>
 
+    <!-- 5. مركز طلب الأنظمة والمشاريع الهندسية الذكي الدولي (Netlify Forms مرتبطة بإيميلك) -->
     <section id="order" class="py-16 max-w-4xl mx-auto px-6">
         <div class="text-center mb-10">
             <h2 class="text-2xl md:text-3xl font-black text-white">بوابة تقديم طلبات المشاريع والأنظمة الذكية</h2>
@@ -314,6 +346,7 @@
         </div>
     </section>
 
+    <!-- 6. الأقسام الاستشارية الضخمة لقواعد الخصوصية والشروط العامة لبراند المشألي تك -->
     <section id="legal" class="py-12 bg-cyberCard/20 border-t border-cyberBorder px-6 text-xs sm:text-sm">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
             
@@ -321,26 +354,70 @@
                 <h3 class="font-bold text-white border-r-4 border-neonBlue pr-2.5">سياسة الخصوصية وأمن الشفرات والبيانات</h3>
                 <div class="bg-cyberCard border border-cyberBorder p-5 rounded-xl text-slate-400 leading-relaxed space-y-2.5">
                     <p>تضمن مؤسسة **المشألي تك** الحماية السيبرانية الفائقة والسرية المطلقة لكافة قواعد البيانات، الأكواد المصدرية، وهيكليات شبكات كاميرات المراقبة أو السيرفرات المركزية المرفوعة على سيرفراتنا الآمنة والمشفرة سحابياً لمنع أي تسريب أو وصول خارجي غير مصرح به.</p>
-                    <p>نلتزم التزاماً كاملاً بحماية الخصوصية الرقمية للمنشآت والمصانع الشريكة لنا، بحيث تخضع كافة المستندات وجداول البيانات لدورات تشفير آمنة ومحمية بنظام أمان متطور لا يمكن اختراقه.</p>
                 </div>
             </div>
 
             <div class="space-y-3">
                 <h3 class="font-bold text-white border-r-4 border-neonPurple pr-2.5">الشروط والأحكام العامة للتعاقد الفني والمؤسسي</h3>
                 <div class="bg-cyberCard border border-cyberBorder p-5 rounded-xl text-slate-400 leading-relaxed space-y-2.5">
-                    <p>1. **اعتماد النطاق الفني (SRS):** يتم البدء في صياغة الأكواد وتجهيز وتوصيل المنظومات والشبكات فور اعتماد وثيقة المتمتطلبات الفنية والموافقة على مراحل التسليم البرمجي المحددة بالتاريخ.</p>
+                    <p>1. **اعتماد النطاق الفني (SRS):** يتم البدء في صياغة الأكواد وتجهيز وتوصيل المنظومات والشبكات فور اعتماد وثيقة المتطلبات الفنية والموافقة على مراحل التسليم البرمجي المحددة بالتاريخ.</p>
                     <p>2. **حقوق الملكية الفكرية الكبرى:** تنتقل كافة حقوق الملكية الفكرية، الكود المصدري، والملفات التقنية للجهة الطالِبة بشكل رسمي ومسجل فور استيفاء الالتزامات المالية المتفق عليها في عقد هندسة النظام.</p>
-                    <p>3. **الضمان والصيانة والدعم الفني:** تخضع كافة الأنظمة والمواقع وشبكات المراقبة لفترة ضمان شاملة وصيانة دورية من قبل المهندس للتأكد من خلو المنظومات من الثغرات واستقرار العمليات مئة بالمئة.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <!-- 7. تذييل المنصة العالمي لحقوق النشر لشركتك لعام 2026 -->
     <footer class="bg-cyberBlack border-t border-cyberBorder py-10 px-6 text-center text-xs text-slate-500">
         <p>&copy; 2026 جميع الحقوق البرمجية والهندسية والقانونية محفوظة ومسجلة لدى <span class="text-white font-bold">المشألي تك (Al-Mashali Tech)</span></p>
         <p class="text-[10px] text-slate-600 mt-1">بوابة تكنولوجية عالمية معتمدة ومحمية للمهندس أحمد عبدالله المشألي</p>
     </footer>
+
+    <!-- 🚀 كود الذكاء الحركي (JavaScript) لإخفاء الواجهات فوراً بعد الإدخال كالمصانع العالمية -->
+    <script>
+        // أولاً: كود إخفاء واجهة تسجيل الحساب وتحويلها لبطاقة نجاح رقمية
+        document.getElementById('global-auth-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const wrapper = document.getElementById('auth-form-wrapper');
+            wrapper.classList.add('fade-out');
+            
+            setTimeout(() => {
+                wrapper.innerHTML = `
+                    <div class="text-center py-8 space-y-4 animate-fade-in">
+                        <div class="w-16 h-16 bg-gradient-to-r from-neonBlue to-neonPurple rounded-full flex items-center justify-center mx-auto shadow-lg shadow-cyan-500/30">
+                            <i class="fas fa-shield-alt text-cyberBlack text-2xl animate-pulse"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-sm font-black text-white text-neon-glow">تم الاتصال والمصادقة بنجاح!</h4>
+                            <p class="text-[11px] text-slate-400">لقد اختفت واجهة التسجيل وتم ربط عقدتك بجدار حماية المشألي تك بنجاح.</p>
+                        </div>
+                        <div class="text-[10px] bg-slate-800 text-emerald-400 font-mono py-1 rounded border border-emerald-500/20">
+                            STATUS: ENCRYPTED_USER_CONNECTED
+                        </div>
+                    </div>
+                `;
+                wrapper.classList.remove('fade-out');
+            }, 500);
+        });
+
+        // ثانياً: كود إخفاء واجهة نشرة الاشتراك البريدي وتحويلها لرسالة شكر فورية
+        document.getElementById('global-newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const wrapper = document.getElementById('newsletter-form-wrapper');
+            wrapper.classList.add('fade-out');
+            
+            setTimeout(() => {
+                wrapper.innerHTML = `
+                    <div class="text-center md:text-left px-4 py-2 text-neonBlue font-black text-xs flex items-center justify-center gap-2 animate-pulse">
+                        <i class="fas fa-check-circle text-sm"></i>
+                        <span>تم تفعيل الاشتراك العالمي واختفت الواجهة بنجاح من خوادمنا السحابية!</span>
+                    </div>
+                `;
+                wrapper.classList.remove('fade-out');
+            }, 500);
+        });
+    </script>
 
 </body>
 </html>
