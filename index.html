@@ -3,498 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>م. أحمد عبدالله المشألي | هندسة الكمبيوتر والأنظمة المتكاملة</title>
-    <!-- Tailwind CSS CDN -->
+    <title>المشألي تك | المنصة الرقمية العالمية للمهندس أحمد عبدالله المشألي</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Pro Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Cairo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
     <script>
-        // تهيئة خدمة البريد الإلكتروني العالمية بمفتاحك العام الفعال
-        (function() {
-            emailjs.init("soZKmsA4a6E2FSF-d");
-        })();
-
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Cairo', 'sans-serif'] },
                     colors: {
-                        cyberDark: '#0b0f19',
-                        cyberCard: '#131c2e',
-                        cyberBorder: '#1e2943',
-                        neonCyan: '#06b6d4',
-                        neonGreen: '#10b981',
-                    },
-                    boxShadow: {
-                        neonGlow: '0 0 20px rgba(6, 182, 212, 0.15)',
-                        neonGlowGreen: '0 0 20px rgba(16, 185, 129, 0.15)',
+                        cyberBlack: '#020617',
+                        cyberCard: '#0f172a',
+                        cyberBorder: '#1e293b',
+                        neonBlue: '#06b6d4',
+                        neonPurple: '#a855f7'
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-nav {
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .cyber-gradient-text {
-            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0b0f19;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #1e2943;
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #06b6d4;
-        }
+        .neon-glow { box-shadow: 0 0 25px rgba(6, 182, 212, 0.2); }
+        .text-neon-glow { text-shadow: 0 0 10px rgba(6, 182, 212, 0.4); }
+        .glass-panel { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-cyberDark text-slate-100 custom-scrollbar antialiased overflow-x-hidden">
+<body class="bg-cyberBlack text-slate-100 antialiased font-sans">
 
-    <!-- Global Progress Bar -->
-    <div class="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-neonCyan to-neonGreen z-50"></div>
-
-    <!-- Premium Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 glass-nav z-40 border-b border-cyberBorder">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <nav class="fixed top-0 left-0 right-0 h-20 border-b border-cyberBorder glass-panel z-50">
+        <div class="max-w-7xl mx-auto px-6 h-full flex justify-between items-center">
             <div class="flex items-center space-x-reverse space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neonCyan to-neonGreen flex items-center justify-center shadow-neonGlow">
-                    <i class="fas fa-terminal text-cyberDark font-black"></i>
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-r from-neonBlue to-neonPurple flex items-center justify-center shadow-lg">
+                    <i class="fas fa-network-wired text-cyberBlack font-black"></i>
                 </div>
-                <span class="text-xl font-black tracking-wider text-white">AL-MASHALI TECH</span>
+                <span class="text-lg font-black tracking-wider text-white">المشألي تك / AL-MASHALI TECH</span>
             </div>
-            
-            <div class="hidden lg:flex items-center space-x-reverse space-x-8 text-sm font-semibold">
-                <a href="#home" class="hover:text-neonCyan transition-all duration-300">الرئيسية</a>
-                <a href="#about" class="hover:text-neonCyan transition-all duration-300">الخبرات الشخصية</a>
-                <a href="#services" class="hover:text-neonCyan transition-all duration-300">الخدمات والأنظمة</a>
-                <a href="#portfolio" class="hover:text-neonCyan transition-all duration-300">المشاريع الهندسيّة</a>
-                <a href="#certificates" class="hover:text-neonCyan transition-all duration-300">الاعتمادات والتراخيص</a>
-                <a href="#order-system" class="hover:text-neonCyan transition-all duration-300">تقديم طلب تفصيلي</a>
+            <div class="hidden lg:flex items-center space-x-reverse space-x-8 text-sm font-bold">
+                <a href="#about" class="hover:text-neonBlue transition">من نحن</a>
+                <a href="#projects" class="hover:text-neonBlue transition">المشاريع المنفذة</a>
+                <a href="#order" class="hover:text-neonBlue transition">طلب منظومة</a>
+                <a href="#legal" class="hover:text-neonBlue transition">السياسات والخصوصية</a>
             </div>
-
-            <div class="flex items-center space-x-reverse space-x-4">
-                <a href="#order-system" class="bg-gradient-to-r from-neonCyan to-neonGreen text-cyberDark font-bold px-5 py-2.5 rounded-xl text-sm hover:opacity-90 transition-all duration-300 shadow-neonGlow">
-                    إرسال طلب مشروع
-                </a>
+            <div class="text-xs font-mono text-neonBlue bg-cyberCard border border-cyberBorder px-3 py-1.5 rounded-lg hidden sm:block">
+                ALMASHALI_CORE_NODE_v2.6
             </div>
         </div>
     </nav>
 
-    <!-- Hero Matrix Section -->
-    <section id="home" class="pt-40 pb-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center min-h-screen relative">
-        <div class="absolute w-96 h-96 bg-neonCyan/10 rounded-full blur-[120px] top-20 right-10 -z-10 animate-pulse"></div>
-        <div class="absolute w-96 h-96 bg-neonGreen/10 rounded-full blur-[120px] bottom-10 left-10 -z-10"></div>
-
-        <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center space-x-reverse space-x-2 bg-cyberCard border border-cyberBorder px-4 py-1.5 rounded-full shadow-inner">
-                <span class="w-2 h-2 rounded-full bg-neonCyan animate-ping"></span>
-                <span class="text-xs font-mono tracking-wider text-neonCyan font-bold uppercase">المنصة الهندسية الرسمية والكاملة</span>
+    <header id="about" class="pt-32 pb-12 px-6 max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 items-start">
+        
+        <div class="lg:col-span-7 space-y-6 lg:mt-2">
+            <div class="inline-flex items-center space-x-reverse space-x-2 bg-cyberCard border border-cyberBorder px-4 py-1.5 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-neonBlue animate-ping"></span>
+                <span class="text-xs font-bold text-neonBlue uppercase tracking-wider">المنصة الهندسية والتكنولوجية الرسمية المعتمدة</span>
             </div>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.2]">
-                م. أحمد عبدالله المشألي <br>
-                <span class="cyber-gradient-text">هندسة الكمبيوتر، الشبكات والأنظمة</span>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
+                موقع المهندس <br>
+                <span class="bg-gradient-to-r from-neonBlue to-neonPurple bg-clip-text text-transparent text-neon-glow">أحمد عبدالله المشألي</span>
             </h1>
-            <p class="text-slate-400 text-lg leading-relaxed max-w-2xl">
-                نحن نقوم بهندسة الحلول الرقمية المتكاملة من الصفر. بناء الأنظمة والبرمجيات الضخمة، تصميم البنى التحتية المتطورة للشبكات والسيرفرات، وتجهيز الأنظمة الأمنية وكاميرات المراقبة بأعلى كفاءة ومعايير عالمية للمؤسسات والمصانع.
+            
+            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm font-bold pt-1">
+                <div class="flex items-center space-x-reverse space-x-2 bg-cyberCard/60 border border-cyberBorder p-3 rounded-xl hover:border-neonBlue transition">
+                    <i class="fas fa-laptop-code text-neonBlue text-base"></i>
+                    <span>علوم وهندسة الكمبيوتر</span>
+                </div>
+                <div class="flex items-center space-x-reverse space-x-2 bg-cyberCard/60 border border-cyberBorder p-3 rounded-xl hover:border-neonPurple transition">
+                    <i class="fas fa-server text-neonPurple text-base"></i>
+                    <span>هندسة الشبكات والسيرفرات</span>
+                </div>
+                <div class="flex items-center space-x-reverse space-x-2 bg-cyberCard/60 border border-cyberBorder p-3 rounded-xl hover:border-neonBlue transition">
+                    <i class="fas fa-video text-neonBlue text-base"></i>
+                    <span>أنظمة المراقبة والـ CCTV</span>
+                </div>
+                <div class="flex items-center space-x-reverse space-x-2 bg-cyberCard/60 border border-cyberBorder p-3 rounded-xl hover:border-neonPurple transition">
+                    <i class="fas fa-mobile-alt text-neonPurple text-base"></i>
+                    <span>برمجة الهواتف الذكية والأجهزة</span>
+                </div>
+            </div>
+
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                مستودع تكنولوجي موحد لاستعراض وتوثيق كافة الحلول البرمجية والبنى التحتية وتجهيزات المنظومات المتقدمة للمصانع والمنشآت الكبرى. صُممت هذه المنصة لتستوعب كافة أعمالنا ومشاريعنا الحاضرة والمستقبلية كبوابة تقنية متكاملة مخصصة لقطاع الأعمال والأنظمة الذكية الفعّالة على أرض الواقع.
             </p>
-            <div class="flex flex-wrap gap-4 pt-4">
-                <a href="#order-system" class="bg-gradient-to-r from-neonCyan to-neonGreen text-cyberDark font-black px-8 py-4 rounded-xl hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-neonCyan/20">
-                    ابدأ مشروعك الآن
-                </a>
-                <a href="#portfolio" class="bg-cyberCard border border-cyberBorder px-8 py-4 rounded-xl font-bold hover:bg-slate-800/50 hover:border-neonCyan/40 transition-all duration-300">
-                    استعراض المشاريع المنفذة
-                </a>
-            </div>
         </div>
-
-        <!-- Grand Dashboard Preview Component -->
-        <div class="lg:col-span-5 w-full relative">
-            <div class="bg-cyberCard border border-cyberBorder rounded-2xl p-6 shadow-2xl shadow-black/50 relative overflow-hidden group">
-                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-neonCyan to-neonGreen"></div>
-                <div class="flex justify-between items-center mb-6 border-b border-cyberBorder pb-4">
-                    <div class="flex space-x-reverse space-x-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+        
+        <div class="lg:col-span-5 w-full max-w-sm mx-auto lg:mr-auto">
+            <div class="bg-gradient-to-b from-cyberCard to-slate-900 border border-cyberBorder rounded-2xl p-5 shadow-2xl relative overflow-hidden neon-glow">
+                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-neonBlue to-neonPurple"></div>
+                
+                <div class="flex items-center justify-between mb-4 border-b border-cyberBorder pb-3">
+                    <div class="flex items-center space-x-reverse space-x-2">
+                        <i class="fas fa-user-shield text-neonBlue text-sm"></i>
+                        <h3 class="text-sm font-black text-white">بوابة التسجيل والدخول للمنصة</h3>
                     </div>
-                    <span class="text-xs font-mono text-slate-500">almshali-core-v3.io</span>
+                    <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400 font-mono">Auth Node</span>
                 </div>
-                <div class="space-y-4 font-mono text-xs sm:text-sm">
-                    <div class="p-3 bg-cyberDark/60 rounded-lg border border-cyberBorder/40">
-                        <p class="text-neonCyan font-bold">$ cat engineer_profile.json</p>
-                        <p class="text-slate-400 mt-1">"الاسم": "م. أحمد عبدالله المشألي"</p>
-                        <p class="text-slate-400">"التخصص": "علوم وهندسة الكمبيوتر"</p>
-                        <p class="text-slate-400">"البريد الإلكتروني": "ahmedalmshali2004@gmail.com"</p>
-                    </div>
-                    <div class="p-3 bg-cyberDark/60 rounded-lg border border-cyberBorder/40">
-                        <p class="text-neonGreen font-bold">$ check_infrastructure_status</p>
-                        <p class="text-slate-300 mt-1"><span class="text-neonGreen">●</span> Systems Integration: Deploying Complete ERPs</p>
-                        <p class="text-slate-300"><span class="text-neonGreen">●</span> Network Topology: Structured Routing & Switching</p>
-                        <p class="text-slate-300"><span class="text-neonGreen">●</span> Security Systems: Advanced CCTV & Storage Arrays</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="py-12 bg-cyberCard/40 border-y border-cyberBorder px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <p class="text-3xl md:text-4xl font-black text-neonCyan">100%</p>
-                <p class="text-xs md:text-sm text-slate-400 mt-1 uppercase tracking-wider">جودة الكود والبنية التحتية</p>
-            </div>
-            <div>
-                <p class="text-3xl md:text-4xl font-black text-neonGreen">24/7</p>
-                <p class="text-xs md:text-sm text-slate-400 mt-1 uppercase tracking-wider">مراقبة وصيانة الأنظمة والشبكات</p>
-            </div>
-            <div>
-                <p class="text-3xl md:text-4xl font-black text-neonCyan">+15</p>
-                <p class="text-xs md:text-sm text-slate-400 mt-1 uppercase tracking-wider">لوحات تحكم وأنظمة إدارية منفذة</p>
-            </div>
-            <div>
-                <p class="text-3xl md:text-4xl font-black text-neonGreen">+40</p>
-                <p class="text-xs md:text-sm text-slate-400 mt-1 uppercase tracking-wider">موقع ومنشأة تم تأمينها بالكامل</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Hub Section -->
-    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-20">
-            <h2 class="text-3xl md:text-5xl font-black">المنظومة الخدمية الشاملة</h2>
-            <p class="text-slate-400 mt-4 text-base md:text-lg">هندسة كاملة تبدأ من كتابة السطر البرمجي الأول للأنظمة وتصل لتجهيز الكابلات والسيرفرات والكاميرات على أرض الواقع.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Service Block 1 -->
-            <div class="bg-cyberCard border border-cyberBorder p-8 rounded-2xl shadow-xl hover:border-neonCyan/50 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-neonCyan/5 rounded-full blur-2xl group-hover:bg-neonCyan/10 transition-all"></div>
-                <div class="w-14 h-14 bg-neonCyan/10 rounded-xl flex items-center justify-center text-neonCyan text-2xl mb-6 shadow-neonGlow group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-cubes"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-4">بناء وبرمجة الأنظمة المتكاملة</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                    برمجة الأنظمة الإدارية الضخمة (ERP)، لوحات التحكم المتقدمة، وقواعد البيانات المخصصة لإدارة المصانع والشركات بشكل ذكي وآمن بالكامل لتسهيل العمليات واتخاذ القرارات السليمة.
-                </p>
-                <ul class="text-xs text-slate-300 space-y-2.5 border-t border-cyberBorder/60 pt-4 font-mono">
-                    <li><i class="fas fa-check text-neonCyan ml-2"></i> Custom Dashboards & Analytics</li>
-                    <li><i class="fas fa-check text-neonCyan ml-2"></i> Advanced Database Architecture</li>
-                    <li><i class="fas fa-check text-neonCyan ml-2"></i> Secure API Integrations</li>
-                </ul>
-            </div>
-
-            <!-- Service Block 2 -->
-            <div class="bg-cyberCard border border-cyberBorder p-8 rounded-2xl shadow-xl hover:border-neonGreen/50 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-neonGreen/5 rounded-full blur-2xl group-hover:bg-neonGreen/10 transition-all"></div>
-                <div class="w-14 h-14 bg-neonGreen/10 rounded-xl flex items-center justify-center text-neonGreen text-2xl mb-6 shadow-neonGlowGreen group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-4">هندسة الشبكات والسيرفرات</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                    تخطيط وتصميم البنية التحتية للشبكات السلكية واللاسلكية، إعداد وتكوين الموجهات والمبدلات (Routers & Switches)، وتهيئة جدران الحماية لتأمين البيانات وربط الفروع بسلاسة.
-                </p>
-                <ul class="text-xs text-slate-300 space-y-2.5 border-t border-cyberBorder/60 pt-4 font-mono">
-                    <li><i class="fas fa-check text-neonGreen ml-2"></i> WAN/LAN Routing & Switching</li>
-                    <li><i class="fas fa-check text-neonGreen ml-2"></i> Server Configuration & Virtualization</li>
-                    <li><i class="fas fa-check text-neonGreen ml-2"></i> Firewall & Security Hardening</li>
-                </ul>
-            </div>
-
-            <!-- Service Block 3 -->
-            <div class="bg-cyberCard border border-cyberBorder p-8 rounded-2xl shadow-xl hover:border-neonCyan/50 transition-all duration-300 group relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-neonCyan/5 rounded-full blur-2xl group-hover:bg-neonCyan/10 transition-all"></div>
-                <div class="w-14 h-14 bg-neonCyan/10 rounded-xl flex items-center justify-center text-neonCyan text-2xl mb-6 shadow-neonGlow group-hover:scale-110 transition-transform duration-300">
-                    <i class="fas fa-video"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-4">أنظمة المراقبة الذكية والـ CCTV</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                    توريد وتركيب شبكات كاميرات المراقبة المتطورة (IP Cameras)، دمجها مع أنظمة التسجيل الشبكي (NVR/DVR)، وتوفير لوحات المراقبة عن بعد وحلول النسخ الاحتياطي الذكي على مدار الساعة.
-                </p>
-                <ul class="text-xs text-slate-300 space-y-2.5 border-t border-cyberBorder/60 pt-4 font-mono">
-                    <li><i class="fas fa-check text-neonCyan ml-2"></i> Full HD IP Cameras Installation</li>
-                    <li><i class="fas fa-check text-neonCyan ml-2"></i> Remote Live Monitoring (iOS/Android)</li>
-                    <li><i class="fas fa-check text-neonCyan ml-2"></i> Motion Detection Alerts Setup</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Portfolio Section -->
-    <section id="portfolio" class="py-24 bg-cyberCard/20 border-y border-cyberBorder px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-black">معرض المشاريع والأعمال المنفذة</h2>
-                    <p class="text-slate-400 mt-4 text-base">استعراض لبعض البنى التحتية والأنظمة التقنية البرمجية والأمنية التي تم تشغيلها.</p>
-                </div>
-                <!-- Dynamic Category Filter Buttons -->
-                <div class="flex flex-wrap gap-2.5 bg-cyberCard border border-cyberBorder p-1.5 rounded-xl">
-                    <button onclick="filterPortfolio('all')" class="portfolio-btn bg-gradient-to-r from-neonCyan to-neonGreen text-cyberDark font-bold px-4 py-2 rounded-lg text-xs transition-all duration-300">الكل</button>
-                    <button onclick="filterPortfolio('systems')" class="portfolio-btn hover:bg-cyberBorder px-4 py-2 rounded-lg text-xs font-bold transition-all duration-300 text-slate-300">الأنظمة البرمجية</button>
-                    <button onclick="filterPortfolio('networks')" class="portfolio-btn hover:bg-cyberBorder px-4 py-2 rounded-lg text-xs font-bold transition-all duration-300 text-slate-300">الشبكات والسيرفرات</button>
-                    <button onclick="filterPortfolio('cctv')" class="portfolio-btn hover:bg-cyberBorder px-4 py-2 rounded-lg text-xs font-bold transition-all duration-300 text-slate-300">كاميرات المراقبة</button>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
-                <!-- Project 1: Systems -->
-                <div class="portfolio-item systems bg-cyberCard border border-cyberBorder rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-52 bg-slate-800 border-b border-cyberBorder flex items-center justify-center relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cyberDark to-transparent opacity-60"></div>
-                        <i class="fas fa-industry text-6xl text-neonCyan/40 group-hover:scale-110 transition-transform duration-300"></i>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-mono font-bold text-neonCyan uppercase tracking-widest">الأنظمة البرمجية</span>
-                        <h4 class="text-lg font-bold text-white mt-2">نظام "المصنع" المتكامل لإدارة خطوط الإنتاج</h4>
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">بناء لوحة تحكم برمجية ضخمة مدعومة بقواعد بيانات علائقية لإدارة المستودعات، تتبع سير التصنيع، وإصدار التقارير المالية والتشغيلية المتقدمة.</p>
-                    </div>
-                </div>
-
-                <!-- Project 2: Networks -->
-                <div class="portfolio-item networks bg-cyberCard border border-cyberBorder rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-52 bg-slate-800 border-b border-cyberBorder flex items-center justify-center relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cyberDark to-transparent opacity-60"></div>
-                        <i class="fas fa-server text-6xl text-neonGreen/40 group-hover:scale-110 transition-transform duration-300"></i>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-mono font-bold text-neonGreen uppercase tracking-widest">الشبكات والسيرفرات</span>
-                        <h4 class="text-lg font-bold text-white mt-2">هندسة البنية التحتية لشبكة شركة تجارية</h4>
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">تصميم وبناء شبكة LAN/WAN متكاملة، توزيع غرف السيرفرات، تكوين أنظمة التوجيه الذكية وحلول جدران الحماية لتأمين تدفق البيانات بالكامل.</p>
-                    </div>
-                </div>
-
-                <!-- Project 3: CCTV -->
-                <div class="portfolio-item cctv bg-cyberCard border border-cyberBorder rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="h-52 bg-slate-800 border-b border-cyberBorder flex items-center justify-center relative group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cyberDark to-transparent opacity-60"></div>
-                        <i class="fas fa-shield-halved text-6xl text-neonCyan/40 group-hover:scale-110 transition-transform duration-300"></i>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-mono font-bold text-neonCyan uppercase tracking-widest">كاميرات المراقبة</span>
-                        <h4 class="text-lg font-bold text-white mt-2">منظومة مراقبة IP Cameras ذكية لمنشأة صناعية</h4>
-                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">تركيب وضبط منظومة كاميرات مراقبة رقمية بدقة عالية، ربطها بسيرفرات التخزين الشبكي، وضبط بروتوكولات الحماية للوصول الخارجي المشفر عبر الهاتف.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates & Degrees Section -->
-    <section id="certificates" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-20">
-            <h2 class="text-3xl md:text-5xl font-black">الاعتمادات والمؤهلات الهندسية</h2>
-            <p class="text-slate-400 mt-4 text-base">التوثيق الأكاديمي والمهني الذي يضمن مطابقة كافة الأنظمة والشبكات لأعلى معايير الصناعة والتشريعات الهندسية المعتمدة.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-cyberCard border border-cyberBorder p-6 rounded-2xl flex items-start space-x-reverse space-x-5 shadow-xl relative overflow-hidden group">
-                <div class="absolute left-0 bottom-0 w-2 h-full bg-neonCyan"></div>
-                <div class="text-neonCyan text-3xl p-4 bg-cyberDark rounded-xl border border-cyberBorder"><i class="fas fa-user-graduate"></i></div>
-                <div>
-                    <h4 class="text-lg font-bold text-white">بكالوريوس علوم وهندسة الكمبيوتر</h4>
-                    <p class="text-slate-400 text-sm mt-2 leading-relaxed">شهادة هندسية تخصصية تغطي هيكلية الحواسب، هندسة البرمجيات والأنظمة الموزعة، تصميم قواعد البيانات العملاقة، وأمن المعلومات والشبكات المتقدمة.</p>
-                </div>
-            </div>
-
-            <div class="bg-cyberCard border border-cyberBorder p-6 rounded-2xl flex items-start space-x-reverse space-x-5 shadow-xl relative overflow-hidden group">
-                <div class="absolute left-0 bottom-0 w-2 h-full bg-neonGreen"></div>
-                <div class="text-neonGreen text-3xl p-4 bg-cyberDark rounded-xl border border-cyberBorder"><i class="fas fa-file-signature"></i></div>
-                <div>
-                    <h4 class="text-lg font-bold text-white">رخص واعتمادات مزاولة المهنة الفنية</h4>
-                    <p class="text-slate-400 text-sm mt-2 leading-relaxed">التراخيص والشهادات المهنية المعتمدة الخاصة بتصميم البنى التحتية، هندسة الأنظمة والشبكات، وتركيب وتشغيل الأنظمة الأمنية وكاميرات المراقبة للمنشآت الحيوية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- World-Class Detailed Project Estimation & Request Form -->
-    <section id="order-system" class="py-24 bg-gradient-to-b from-cyberDark to-slate-950 border-t border-cyberBorder px-6 relative">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black">مركز حجز وتقديم طلبات المشاريع التفصيلي</h2>
-                <p class="text-slate-400 mt-4 text-base">يرجى تعبئة الحقول والخيارات أدناه بدقة. سيقوم النظام بجمع وتحليل طلبك وإرساله فوراً بشكل كامل ومفصل إلى البريد الإلكتروني للمهندس لدراسته بدقة.</p>
-            </div>
-
-            <div class="bg-cyberCard border border-cyberBorder p-8 sm:p-12 rounded-3xl shadow-2xl relative">
-                <div class="absolute top-0 right-12 transform -translate-y-1/2 bg-gradient-to-r from-neonCyan to-neonGreen text-cyberDark font-black text-xs uppercase tracking-widest px-4 py-1.5 rounded-full">
-                    نموذج طلب ذكي متصل بالبريد الإلكتروني
-                </div>
-
-                <!-- Fully Connected Functional Form -->
-                <form id="globalContactForm" class="space-y-8">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">اسم العميل الكريم أو اسم الشركة / المؤسسة</label>
-                            <input type="text" id="client_name" required class="w-full bg-cyberDark border border-cyberBorder rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-neonCyan transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">البريد الإلكتروني للتواصل والرد</label>
-                            <input type="email" id="client_email" required class="w-full bg-cyberDark border border-cyberBorder rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-neonCyan transition-colors">
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">رقم الهاتف الفعال (مع مفتاح الدولة والواتساب)</label>
-                            <input type="tel" id="client_phone" required class="w-full bg-cyberDark border border-cyberBorder rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-neonCyan transition-colors" placeholder="+967 ...">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">تصنيف ونوع المشروع المطلوب</label>
-                            <select id="project_category" required class="w-full bg-cyberDark border border-cyberBorder rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-neonCyan transition-colors">
-                                <option value="برمجة وبناء نظام كامل (ERP / Dashboard)">برمجة وبناء نظام كامل (ERP / Dashboard)</option>
-                                <option value="هندسة وتخطيط بنية تحتية للشبكات">هندسة وتخطيط بنية تحتية للشبكات</option>
-                                <option value="تركيب وتجهيز منظومة كاميرات مراقبة CCTV">تركيب وتجهيز منظومة كاميرات مراقبة CCTV</option>
-                                <option value="مشروع تقني مختلط (أنظمة + شبكات + حماية)">مشروع تقني مختلط (أنظمة + شبكات + حماية)</option>
-                                <option value="أخرى / استشارة هندسية وتقنية">أخرى / استشارة هندسية وتقنية</option>
-                            </select>
-                        </div>
-                    </div>
-
+                
+                <form onsubmit="event.preventDefault(); alert('تم تفعيل واجهة الحسابات بنجاح في منصة المشألي تك العالمية!')" class="space-y-3 text-xs">
                     <div>
-                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">الميزانية التقديرية المرصودة للمشروع (اختياري)</label>
-                        <input type="text" id="project_budget" class="w-full bg-cyberDark border border-cyberBorder rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-neonCyan transition-colors" placeholder="مثال: 1500$ أو يحدد بعد النقاش">
+                        <label class="block text-slate-400 font-bold mb-1">الاسم الكامل</label>
+                        <input type="text" required placeholder="أدخل اسمك الكريم" class="w-full bg-cyberBlack border border-cyberBorder rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neonBlue transition text-xs">
                     </div>
-
                     <div>
-                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">وصف تفصيلي وشامل لكافة المتطلبات والميزات المطلوبة بمشروعك</label>
-                        <textarea id="project_details" rows="6" required class="w-full bg-cyberDark border border-cyberBorder rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-neonCyan transition-colors placeholder:text-slate-600" placeholder="اكتب هنا كافة التفاصيل والمواصفات والأجهزة والبرمجيات التي ترغب في توفرها بمشروعك بالتفصيل الكامل..."></textarea>
+                        <label class="block text-slate-400 font-bold mb-1">البريد الإلكتروني</label>
+                        <input type="email" required placeholder="name@domain.com" class="w-full bg-cyberBlack border border-cyberBorder rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neonBlue transition text-xs">
                     </div>
-
-                    <!-- Custom UI Dynamic Loading and Status Messages -->
-                    <div id="formStatus" class="hidden p-4 rounded-xl text-sm font-bold text-center"></div>
-
-                    <button type="submit" class="w-full bg-gradient-to-r from-neonCyan to-neonGreen text-cyberDark font-black py-4 rounded-xl hover:opacity-95 transform hover:scale-[1.01] transition-all duration-300 flex items-center justify-center space-x-reverse space-x-3 shadow-lg shadow-neonCyan/20">
-                        <span>إرسال وتوجيه الطلب للمهندس فوراً</span>
-                        <i class="fas fa-paper-plane"></i>
+                    <div>
+                        <label class="block text-slate-400 font-bold mb-1">كلمة المرور</label>
+                        <input type="password" required placeholder="••••••••" class="w-full bg-cyberBlack border border-cyberBorder rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neonBlue transition text-xs">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-neonBlue to-neonPurple text-cyberBlack font-black py-2.5 rounded-lg hover:opacity-90 transition shadow-md text-xs mt-2">
+                        إنشاء حساب ودخول لوحة التحكم
                     </button>
                 </form>
             </div>
         </div>
+
+    </header>
+
+    <section class="max-w-7xl mx-auto px-6 mb-12">
+        <div class="bg-gradient-to-r from-cyberCard via-slate-900 to-cyberCard border border-cyberBorder rounded-2xl p-4 sm:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-reverse space-x-3 text-center md:text-right">
+                <div class="text-neonBlue text-xl hidden sm:block"><i class="fas fa-bell"></i></div>
+                <div>
+                    <h4 class="text-sm font-black text-white">اشترك في النشرة الهندسية الدورية للمشألي تك</h4>
+                    <p class="text-slate-400 text-xs mt-0.5">كن أول من يصله الملفات التقنية، الأكواد البرمجية، وكتالوجات الأجهزة والمنظومات الحديثة.</p>
+                </div>
+            </div>
+            <form name="newsletter-subscribers" method="POST" data-netlify="true" class="w-full md:w-auto flex gap-2">
+                <input type="email" name="subscriber_email" required placeholder="أدخل بريدك الإلكتروني" class="bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-neonBlue w-full md:w-64">
+                <button type="submit" class="bg-neonBlue text-cyberBlack font-black text-xs px-5 py-2.5 rounded-xl hover:bg-opacity-90 transition shadow-md whitespace-nowrap">
+                    اشترك الآن
+                </button>
+            </form>
+        </div>
     </section>
 
-    <!-- Standard Global Footer & Regulatory Compliance -->
-    <footer class="bg-cyberDark border-t border-cyberBorder py-12 px-6 text-center text-sm text-slate-500">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center space-x-reverse space-x-3">
-                <span class="text-white font-bold">AL-MASHALI TECH</span>
-                <span>© 2026 جميع الحقوق محفوظة قانونياً وفنياً للمهندس أحمد المشألي</span>
+    <section id="projects" class="py-16 bg-cyberCard/30 border-y border-cyberBorder px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-black text-white">واجهات المشاريع والأنظمة المنفذة (من تنفيذي الخاص)</h2>
+                    <p class="text-slate-400 mt-1 text-xs sm:text-sm">معرض واقعي وعملي يستعرض لوحات تحكم البرمجيات، وهندسة البنى التحتية، ومنظومات المراقبة والأجهزة الفعّالة.</p>
+                </div>
+                <div class="text-xs text-slate-400 font-mono bg-cyberBlack px-3 py-1.5 rounded-lg border border-cyberBorder">
+                    MASHALI_REPOS: RUNNING_STABLE
+                </div>
             </div>
-            <div class="flex space-x-reverse space-x-6">
-                <button onclick="toggleModal('privacyModal')" class="hover:text-slate-300 underline cursor-pointer transition">سياسة الخصوصية</button>
-                <button onclick="toggleModal('termsModal')" class="hover:text-slate-300 underline cursor-pointer transition">شروط تقديم الخدمة</button>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonBlue/50 transition duration-300 group flex flex-col">
+                    <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="برمجة أنظمة وإدارة بيانات حقيقية">
+                    </div>
+                    <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-neonBlue bg-neonBlue/10 px-2 py-0.5 rounded">علوم الكمبيوتر والأنظمة البرمجية</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-neonBlue transition">منظومة إدارة قواعد بيانات المصانع</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">بناء لوحات تحكم ويب متطورة لتتبع سير خطوط الإنتاج، إدارة المخزون، والتقارير المالية الذكية السحابية لقطاع الأعمال.</p>
+                        </div>
+                        <div class="pt-3 border-t border-cyberBorder/50 flex items-center justify-between text-xs font-bold">
+                            <a href="#" class="text-neonBlue hover:underline flex items-center gap-1 text-[11px]">
+                                <i class="fas fa-file-pdf"></i> الملف والتقرير الفني
+                            </a>
+                            <span class="text-[10px] font-mono text-slate-500">من تنفيذي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonPurple/50 transition duration-300 group flex flex-col">
+                    <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="كابلات شبكة وسيرفرات واقعية">
+                    </div>
+                    <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-neonPurple bg-neonPurple/10 px-2 py-0.5 rounded">هندسة البنى التحتية والشبكات</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-neonPurple transition">تجهيز غرف الخوادم المركزية وتأمينها</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">تخطيط وهيكلة شبكات LAN/WAN معقدة للمؤسسات، وتوصيل السيرفرات، وتركيب جدران الحماية السيبرانية.</p>
+                        </div>
+                        <div class="pt-3 border-t border-cyberBorder/50 flex items-center justify-between text-xs font-bold">
+                            <a href="#" class="text-neonPurple hover:underline flex items-center gap-1 text-[11px]">
+                                <i class="fas fa-network-wired"></i> مخطط كروكي الشبكة
+                            </a>
+                            <span class="text-[10px] font-mono text-slate-500">من تنفيذي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonBlue/50 transition duration-300 group flex flex-col">
+                    <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="كاميرا مراقبة حقيقية على جدار">
+                    </div>
+                    <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-neonBlue bg-neonBlue/10 px-2 py-0.5 rounded">أنظمة المراقبة الذكية CCTV</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-neonBlue transition">منظومات المراقبة الرقمية IP CAM</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">توريد وتركيب شبكات كاميرات مراقبة رقمية ذكية وربطها بسيرفرات التخزين المركزية NVR مع الحماية المطلقة للموقع.</p>
+                        </div>
+                        <div class="pt-3 border-t border-cyberBorder/50 flex items-center justify-between text-xs font-bold">
+                            <a href="#" class="text-neonBlue hover:underline flex items-center gap-1 text-[11px]">
+                                <i class="fas fa-images"></i> كتالوج صور المنظومة
+                            </a>
+                            <span class="text-[10px] font-mono text-slate-500">من تنفيذي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cyberCard border border-cyberBorder rounded-xl overflow-hidden shadow-lg hover:border-neonPurple/50 transition duration-300 group flex flex-col">
+                    <div class="h-44 bg-slate-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="تطبيق هاتف حقيقي في اليد">
+                    </div>
+                    <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <span class="text-[9px] font-bold text-neonPurple bg-neonPurple/10 px-2 py-0.5 rounded">برمجة الهواتف الذكية والأجهزة</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-neonPurple transition">تتطبيقات التحكم ومتابعة الأنظمة</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">تطوير تطبيقات هواتف ذكية (Android / iOS) مخصصة لمتابعة الأنظمة الأمنية وكاميرات المراقبة والعمليات التجارية عن بعد.</p>
+                        </div>
+                        <div class="pt-3 border-t border-cyberBorder/50 flex items-center justify-between text-xs font-bold">
+                            <a href="#" class="text-neonPurple hover:underline flex items-center gap-1 text-[11px]">
+                                <i class="fas fa-laptop-house"></i> دليل واجهات التطبيق
+                            </a>
+                            <span class="text-[10px] font-mono text-slate-500">من تنفيذي</span>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <section id="order" class="py-16 max-w-4xl mx-auto px-6">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-black text-white">بوابة تقديم طلبات المشاريع والأنظمة الذكية</h2>
+            <p class="text-slate-400 mt-1 text-xs sm:text-sm">قم بتعبئة متطلبات منشأتك الفنية، وسيتولى السيرفر نقلها وتوجيهها فوراً لبريد المهندس المباشر.</p>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBorder rounded-2xl p-6 sm:p-10 shadow-2xl">
+            <form name="almshali-global-system-requests" method="POST" data-netlify="true" class="space-y-5 text-xs sm:text-sm">
+                
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block font-bold text-slate-400 mb-2">اسم العميل الكريم / اسم المؤسسة أو المصنع</label>
+                        <input type="text" name="client_name" required class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonBlue transition">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-400 mb-2">البريد الإلكتروني الرسمي للتواصل</label>
+                        <input type="email" name="client_email" required class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonBlue transition">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block font-bold text-slate-400 mb-2">رقم الهاتف الفعال للتواصل (نظام دولي لكافة الدول)</label>
+                        <div class="flex gap-2">
+                            <select name="country_code" required class="bg-cyberBlack border border-cyberBorder rounded-xl px-2 py-3 text-xs text-white focus:outline-none focus:border-neonBlue w-1/3">
+                                <option value="+967">اليمن (+967)</option>
+                                <option value="+966">السعودية (+966)</option>
+                                <option value="+971">الإمارات (+971)</option>
+                                <option value="+965">الكويت (+965)</option>
+                                <option value="+968">عمان (+968)</option>
+                                <option value="+974">قطر (+974)</option>
+                                <option value="+20">مصر (+20)</option>
+                                <option value="دولي">دولة أخرى</option>
+                            </select>
+                            <input type="tel" name="phone_number" required placeholder="أدخل رقم الهاتف" class="w-2/3 bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonBlue transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-400 mb-2">تحديد وتصنيف المنظومة التقنية المطلوبة</label>
+                        <select name="project_type" required class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonBlue">
+                            <option value="علوم وهندسة كمبيوتر وبرمجيات">علوم وهندسة كمبيوتر وبرمجيات كبرى ولوحات تحكم</option>
+                            <option value="هندسة شبكات وسيرفرات كامله">تخطيط وتجهيز البنية التحتية للشبكات والسيرفرات</option>
+                            <option value="منظومة مراقبة وأمنية ذكية">توريد وتركيب شبكات كاميرات المراقبة IP CCTV</option>
+                            <option value="برمجة وتجهيز هواتف ذكية وأجهزة">برمجة وتطوير تطبيقات الهواتف الذكية والأجهزة</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-slate-400 mb-2">المواصفات الفنية والشروط التقنية الكاملة المطلوبة للنظام</label>
+                    <textarea name="project_specifications" rows="5" required placeholder="يرجى كتابة كافة التفاصيل الفنية البرمجية، الأجهزة المطلوبة، أو ميزات الشبكة والمراقبة التي تريد تشغيلها في منشأتك بالتفصيل التام..." class="w-full bg-cyberBlack border border-cyberBorder rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neonBlue transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-neonBlue to-neonPurple text-cyberBlack font-black py-3.5 rounded-xl hover:opacity-95 transition transform hover:scale-[1.01] flex items-center justify-center space-x-reverse space-x-2 shadow-lg">
+                    <span>إرسال وتثبيت الطلب في السيرفرات فوراً</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+
+            <div class="mt-10 pt-6 border-t border-cyberBorder/50 grid sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                <div class="flex items-center space-x-reverse space-x-3 bg-cyberBlack/50 p-4 rounded-xl border border-cyberBorder/40">
+                    <div class="text-neonBlue text-xl"><i class="fas fa-phone-alt"></i></div>
+                    <div>
+                        <p class="text-slate-400 text-[10px]">اتصال فوري / واتساب مباشر رسمي:</p>
+                        <a href="tel:+967776396303" class="text-white font-bold hover:text-neonBlue transition">+967 776396303</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-reverse space-x-3 bg-cyberBlack/50 p-4 rounded-xl border border-cyberBorder/40">
+                    <div class="text-neonPurple text-xl"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <p class="text-slate-400 text-[10px]">البريد الإلكتروني السحابي الرسمي:</p>
+                        <a href="mailto:ahmedalmshali2004@gmail.com" class="text-white font-bold hover:text-neonPurple transition">ahmedalmshali2004@gmail.com</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <section id="legal" class="py-12 bg-cyberCard/20 border-t border-cyberBorder px-6 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+            
+            <div class="space-y-3">
+                <h3 class="font-bold text-white border-r-4 border-neonBlue pr-2.5">سياسة الخصوصية وأمن الشفرات والبيانات</h3>
+                <div class="bg-cyberCard border border-cyberBorder p-5 rounded-xl text-slate-400 leading-relaxed space-y-2.5">
+                    <p>تضمن مؤسسة **المشألي تك** الحماية السيبرانية الفائقة والسرية المطلقة لكافة قواعد البيانات، الأكواد المصدرية، وهيكليات شبكات كاميرات المراقبة أو السيرفرات المركزية المرفوعة على سيرفراتنا الآمنة والمشفرة سحابياً لمنع أي تسريب أو وصول خارجي غير مصرح به.</p>
+                    <p>نلتزم التزاماً كاملاً بحماية الخصوصية الرقمية للمنشآت والمصانع الشريكة لنا، بحيث تخضع كافة المستندات وجداول البيانات لدورات تشفير آمنة ومحمية بنظام أمان متطور لا يمكن اختراقه.</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h3 class="font-bold text-white border-r-4 border-neonPurple pr-2.5">الشروط والأحكام العامة للتعاقد الفني والمؤسسي</h3>
+                <div class="bg-cyberCard border border-cyberBorder p-5 rounded-xl text-slate-400 leading-relaxed space-y-2.5">
+                    <p>1. **اعتماد النطاق الفني (SRS):** يتم البدء في صياغة الأكواد وتجهيز وتوصيل المنظومات والشبكات فور اعتماد وثيقة المتمتطلبات الفنية والموافقة على مراحل التسليم البرمجي المحددة بالتاريخ.</p>
+                    <p>2. **حقوق الملكية الفكرية الكبرى:** تنتقل كافة حقوق الملكية الفكرية، الكود المصدري، والملفات التقنية للجهة الطالِبة بشكل رسمي ومسجل فور استيفاء الالتزامات المالية المتفق عليها في عقد هندسة النظام.</p>
+                    <p>3. **الضمان والصيانة والدعم الفني:** تخضع كافة الأنظمة والمواقع وشبكات المراقبة لفترة ضمان شاملة وصيانة دورية من قبل المهندس للتأكد من خلو المنظومات من الثغرات واستقرار العمليات مئة بالمئة.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-cyberBlack border-t border-cyberBorder py-10 px-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 جميع الحقوق البرمجية والهندسية والقانونية محفوظة ومسجلة لدى <span class="text-white font-bold">المشألي تك (Al-Mashali Tech)</span></p>
+        <p class="text-[10px] text-slate-600 mt-1">بوابة تكنولوجية عالمية معتمدة ومحمية للمهندس أحمد عبدالله المشألي</p>
     </footer>
 
-    <!-- Compliance Modals System -->
-    <!-- Privacy Policy Modal -->
-    <div id="privacyModal" class="fixed inset-0 bg-cyberDark/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-cyberCard border border-cyberBorder p-8 rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto custom-scrollbar">
-            <div class="flex justify-between items-center mb-6 border-b border-cyberBorder pb-4">
-                <h3 class="text-xl font-bold text-neonCyan">سياسة الخصوصية وحماية بيانات الزوار</h3>
-                <button onclick="toggleModal('privacyModal')" class="text-slate-400 hover:text-white text-lg"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                <p>يلتزم موقع الويب الخاص بالمهندس أحمد عبدالله المشألي بأعلى معايير حماية البيانات والأمن السيبراني. كافة البيانات التي يتم تزويدنا بها من خلال نموذج الطلبات (كالاسم، الهاتف، البريد الإلكتروني، وتفاصيل المشاريع) تُجمع وتُعالج لغرض التواصل الفني المباشر وبناء الأنظمة فقط، ولا يتم تخزينها في قواعد بيانات عامة أو مشاركتها مع أي جهات خارجية مطلقاً.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Terms Modal -->
-    <div id="termsModal" class="fixed inset-0 bg-cyberDark/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-cyberCard border border-cyberBorder p-8 rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto custom-scrollbar">
-            <div class="flex justify-between items-center mb-6 border-b border-cyberBorder pb-4">
-                <h3 class="text-xl font-bold text-neonGreen">شروط تقديم الخدمة والتعاقد الفني</h3>
-                <button onclick="toggleModal('termsModal')" class="text-slate-400 hover:text-white text-lg"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                <p>تخضع كافة أعمال الصيانة، البرمجة، هندسة البنية التحتية للشبكات وكاميرات المراقبة لاتفاقيات مسبقة تحدد نطاق العمل (Scope of Work). يلتزم العميل بتوفير البيانات الفنية والمواصفات الكاملة للمنشأة، بينما نلتزم بتقديم الحلول التقنية وفق أرقى المعايير والممارسات الهندسية الدولية.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Javascript Logical Hub Control Engine -->
-    <script>
-        // دالة إظهار وإخفاء النوافذ القانونية
-        function toggleModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.toggle('hidden');
-        }
-
-        // محرك فلترة معرض المشاريع ديناميكياً بدون إعادة تحميل
-        function filterPortfolio(category) {
-            const items = document.querySelectorAll('.portfolio-item');
-            const buttons = document.querySelectorAll('.portfolio-btn');
-            
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-gradient-to-r', 'from-neonCyan', 'to-neonGreen', 'text-cyberDark');
-                btn.classList.add('hover:bg-cyberBorder', 'text-slate-300');
-            });
-
-            event.target.classList.add('bg-gradient-to-r', 'from-neonCyan', 'to-neonGreen', 'text-cyberDark');
-            event.target.classList.remove('hover:bg-cyberBorder', 'text-slate-300');
-
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        // محرك معالجة وإرسال نموذج الطلبات بالبريد الإلكتروني باستخدام EmailJS SDK الفعلي والخاص بك
-        document.getElementById('globalContactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const statusDiv = document.getElementById('formStatus');
-            statusDiv.classList.remove('hidden', 'bg-red-500/20', 'text-red-400', 'bg-neonGreen/20', 'text-neonGreen');
-            statusDiv.classList.add('bg-cyberBorder', 'text-slate-300');
-            statusDiv.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> جاري معالجة طلبك وتوجيهه إلى بريد المهندس الحقيقي عبر السحابة...';
-
-            // تجميع وتنسيق المدخلات التفصيلية لإرسالها بالبريد الإلكتروني الفعلي الخاص بك
-            const templateParams = {
-                client_name: document.getElementById('client_name').value,
-                client_email: document.getElementById('client_email').value,
-                client_phone: document.getElementById('client_phone').value,
-                project_category: document.getElementById('project_category').value,
-                project_budget: document.getElementById('project_budget').value,
-                project_details: document.getElementById('project_details').value
-            };
-
-            // تشغيل دالة الإرسال الفعلي المباشر لربط بياناتك السحابية
-            emailjs.send('service_uv93syo', 'template_6kpn05i', templateParams)
-                .then(function(response) {
-                    statusDiv.classList.remove('bg-cyberBorder', 'text-slate-300');
-                    statusDiv.classList.add('bg-neonGreen/20', 'text-neonGreen');
-                    statusDiv.innerHTML = '<i class="fas fa-check-circle ml-2"></i> تم إرسال طلبك بنجاح تفصيلي كامل! وصلت رسالتك إلى ahmedalmshali2004@gmail.com وسيتواصل معك المهندس أحمد قريباً.';
-                    document.getElementById('globalContactForm').reset();
-                }, function(error) {
-                    statusDiv.classList.remove('bg-cyberBorder', 'text-slate-300');
-                    statusDiv.classList.add('bg-red-500/20', 'text-red-400');
-                    statusDiv.innerHTML = '<i class="fas fa-times-circle ml-2"></i> فشل إرسال الطلب سحابياً: يرجى التحقق من اتصال الإنترنت أو إعدادات القالب في EmailJS.';
-                    console.log("Error details:", error);
-                });
-        });
-    </script>
 </body>
 </html>
